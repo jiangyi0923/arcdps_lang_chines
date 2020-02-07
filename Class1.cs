@@ -10,7 +10,6 @@ namespace WindowsFormsApp2
     {
         public  enum E_translate
         {
-            /* program */
             LANG_CORE = 1,
 
             /* common: professions */
@@ -561,6 +560,20 @@ namespace WindowsFormsApp2
             LANG_COMMON_AS_SHOWTARGETINFO,
             LANG_COMMON_AS_TARGETINFOTARGET,
             LANG_COMMON_AS_PERSISTBUILDRESET,
+            LANG_COMMON_AS_OPTSTIME,
+            LANG_COMMON_AS_OPTSTIMETOOLTIP,
+            LANG_COMMON_AS_OPTSTIME_USEDMG,
+            LANG_COMMON_AS_DRAWBARS,
+            LANG_COMMON_AS_SUBGROUP,
+            LANG_COMMON_AS_TOPSUBGROUPS,
+            LANG_COMMON_AS_BUFFTOTAL,
+            LANG_COMMON_AS_MAP_MAPASSETTIMEOUT,
+            LANG_COMMON_AS_MAP_MAPASSETTIMEOUTTOOLTIP,
+            LANG_COMMON_AS_MAP_MAPTIMEOUT,
+            LANG_COMMON_AS_MAP_MAPTIMEOUTTOOLTIP,
+            LANG_COMMON_AS_MAP_MODELTIMEOUT,
+            LANG_COMMON_AS_MAP_MODELTIMEOUTTOOLTIP,
+            LANG_COMMON_AS_MAP,
 
             /* end */
             LANG_END
@@ -569,7 +582,12 @@ namespace WindowsFormsApp2
         public string[] Lvs_()
         {
             string[] lang = new string[2048];
+
+
+            ///
             lang[(int)E_translate.LANG_CORE] = "core";
+
+            /* common: professions */
             lang[(int)E_translate.LANG_COMMON_PROF_GUARDIAN] = "Gdn";
             lang[(int)E_translate.LANG_COMMON_PROF_DRAGONHUNTER] = "Dgh";
             lang[(int)E_translate.LANG_COMMON_PROF_WARRIOR] = "War";
@@ -618,7 +636,7 @@ namespace WindowsFormsApp2
             lang[(int)E_translate.LANG_COMMON_SKILLS_NOSKILLS] = "No skills logged";
             lang[(int)E_translate.LANG_COMMON_SKILLS_REMOVED] = "removed";
             lang[(int)E_translate.LANG_COMMON_SKILLS_RESISTED] = "resisted";
-            lang[(int)E_translate.LANG_COMMON_SKILLS_GLANCE] = "glance";
+            lang[(int)E_translate.LANG_COMMON_SKILLS_GLANCE] = "gLANG_Ce";
             lang[(int)E_translate.LANG_COMMON_SKILLS_MISSES] = "misses";
             lang[(int)E_translate.LANG_COMMON_SKILLS_NOTARGETS] = "No targets logged";
 
@@ -678,7 +696,7 @@ namespace WindowsFormsApp2
             lang[(int)E_translate.LANG_PAN_SUMMARY_DOWNCOUNT] = "down count";
             lang[(int)E_translate.LANG_PAN_SUMMARY_CLEANSEDOUT] = "cleanse out";
             lang[(int)E_translate.LANG_PAN_SUMMARY_STRIPPEDOUT] = "strip out";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_GLANCEPCT] = "glance";
+            lang[(int)E_translate.LANG_PAN_SUMMARY_GLANCEPCT] = "gLANG_Ce";
             lang[(int)E_translate.LANG_PAN_SUMMARY_EVADES] = "evades";
             lang[(int)E_translate.LANG_PAN_SUMMARY_INTERRUPTS] = "interrupts";
             lang[(int)E_translate.LANG_PAN_SUMMARY_MISSES] = "misses";
@@ -828,6 +846,21 @@ namespace WindowsFormsApp2
             lang[(int)E_translate.LANG_COMMON_AS_SKILLS] = "skills";
             lang[(int)E_translate.LANG_COMMON_AS_TARGETS] = "targets";
             lang[(int)E_translate.LANG_COMMON_AS_LOG] = "log";
+            lang[(int)E_translate.LANG_COMMON_AS_EXTRAS] = "Extras";
+            lang[(int)E_translate.LANG_COMMON_AS_VERSIONCHECK] = "Check recommended minimum version";
+            lang[(int)E_translate.LANG_COMMON_AS_NOOBLACH] = "Suppress objective achievements";
+            lang[(int)E_translate.LANG_COMMON_AS_NOOBLQUEST] = "Suppress objective quests";
+            lang[(int)E_translate.LANG_COMMON_AS_NOCOMBATTEXT] = "Suppress floating combat text";
+            lang[(int)E_translate.LANG_COMMON_AS_CUR] = "cur";
+            lang[(int)E_translate.LANG_COMMON_AS_REC] = "rec";
+            lang[(int)E_translate.LANG_COMMON_AS_LOGSINVALID] = "Logs will be invalid";
+            lang[(int)E_translate.LANG_COMMON_AS_MAPRELOAD] = "requires map reload";
+            lang[(int)E_translate.LANG_COMMON_AS_NOOBLEVENT] = "Suppress objective events";
+            lang[(int)E_translate.LANG_COMMON_AS_SLOWVATOOLTIP] = "Warning: results unpredictable";
+            lang[(int)E_translate.LANG_COMMON_AS_SLOWVA] = "Slow worldstep when window inactive";
+            lang[(int)E_translate.LANG_COMMON_AS_OPTSEXTRASTOOLTIP] = "Options provided by extras dll";
+            lang[(int)E_translate.LANG_COMMON_AS_SAVEPROFKEYBINDS] = "Save/restore some profession keybinds";
+            lang[(int)E_translate.LANG_COMMON_AS_SAVEPROFKEYBINDSTOOLTIP] = "Automatically load last keybinds on map\nenter, and save on map exit\n(skills group, stow weapon)";
             lang[(int)E_translate.LANG_COMMON_AS_COMBATTIME] = "combat time";
             lang[(int)E_translate.LANG_COMMON_AS_SORTDPS] = "sort per second";
             lang[(int)E_translate.LANG_COMMON_AS_STYLE] = "Style";
@@ -920,45 +953,25 @@ namespace WindowsFormsApp2
             lang[(int)E_translate.LANG_COMMON_AS_SHOWTARGETINFO] = "show target info";
             lang[(int)E_translate.LANG_COMMON_AS_TARGETINFOTARGET] = "Target";
             lang[(int)E_translate.LANG_COMMON_AS_PERSISTBUILDRESET] = "Reset persistent on build change";
+            lang[(int)E_translate.LANG_COMMON_AS_OPTSTIME] = "combat time";
+            lang[(int)E_translate.LANG_COMMON_AS_OPTSTIMETOOLTIP] = "Default combat duration is from combat\nstart to combat end. Changes are applied\nimmediately, no reset.";
+            lang[(int)E_translate.LANG_COMMON_AS_OPTSTIME_USEDMG] = "Use last damage event for combat end";
+            lang[(int)E_translate.LANG_COMMON_AS_DRAWBARS] = "draw bars";
+            lang[(int)E_translate.LANG_COMMON_AS_SUBGROUP] = "subgroup";
+            lang[(int)E_translate.LANG_COMMON_AS_TOPSUBGROUPS] = "top subgroups";
+            lang[(int)E_translate.LANG_COMMON_AS_BUFFTOTAL] = "buffs total";
+            lang[(int)E_translate.LANG_COMMON_AS_MAP_MAPASSETTIMEOUT] = "Map asset timeout";
+            lang[(int)E_translate.LANG_COMMON_AS_MAP_MAPASSETTIMEOUTTOOLTIP] = "Max asset load time before\npop-in (2min WvW WP bug)";
+            lang[(int)E_translate.LANG_COMMON_AS_MAP_MAPTIMEOUT] = "Map timeout";
+            lang[(int)E_translate.LANG_COMMON_AS_MAP_MAPTIMEOUTTOOLTIP] = "Max map load time before\npop-in";
+            lang[(int)E_translate.LANG_COMMON_AS_MAP_MODELTIMEOUT] = "Model timeout";
+            lang[(int)E_translate.LANG_COMMON_AS_MAP_MODELTIMEOUTTOOLTIP] = "Max model load time before\npop-in (agent fashion)";
+            lang[(int)E_translate.LANG_COMMON_AS_MAP] = "Map";
 
-            /* ext: templates */
-            lang[(int)E_translate.LANG_PAN_TEMPLATES_HEADER] = "Templates";
-            lang[(int)E_translate.LANG_PAN_TEMPLATES_LOAD] = "Load";
-            lang[(int)E_translate.LANG_PAN_TEMPLATES_SAVE] = "Save";
-            lang[(int)E_translate.LANG_PAN_TEMPLATES_SORTNUMBER] = "Sort by number";
-            lang[(int)E_translate.LANG_PAN_TEMPLATES_TRAITS] = "Traits";
-            lang[(int)E_translate.LANG_PAN_TEMPLATES_GEAR] = "Gear";
-            lang[(int)E_translate.LANG_PAN_TEMPLATES_SKILLS] = "Skills";
-            lang[(int)E_translate.LANG_PAN_TEMPLATES_LEGENDARY] = "Legendary";
-            lang[(int)E_translate.LANG_PAN_TEMPLATES_PVP] = "PvP";
-            lang[(int)E_translate.LANG_PAN_TEMPLATES_PREEQUIP] = "Pre-equip avail 2h";
-            lang[(int)E_translate.LANG_PAN_TEMPLATES_SORTALPHA] = "Sort alphabetically";
-            lang[(int)E_translate.LANG_PAN_TEMPLATES_COPY] = "Copied";
-            lang[(int)E_translate.LANG_PAN_TEMPLATES_NAME] = "Name";
-            lang[(int)E_translate.LANG_PAN_TEMPLATES_DELETE] = "Delete";
-            lang[(int)E_translate.LANG_PAN_TEMPLATES_OVERWRITE] = "Overwrite";
-            lang[(int)E_translate.LANG_PAN_TEMPLATES_SAVED] = "Saved";
-            lang[(int)E_translate.LANG_PAN_TEMPLATES_LOADING] = "Loading...";
-            lang[(int)E_translate.LANG_PAN_TEMPLATES_REDUCEDRATE] = "Map rate restrictions in place (500ms)";
-            lang[(int)E_translate.LANG_PAN_TEMPLATES_DISABLED] = "Unavailable";
-            lang[(int)E_translate.LANG_PAN_TEMPLATES_CANCEL] = "Cancel";
 
-            /* ext: extras */
-            lang[(int)E_translate.LANG_COMMON_AS_EXTRAS] = "Extras";
-            lang[(int)E_translate.LANG_COMMON_AS_VERSIONCHECK] = "Check recommended minimum version";
-            lang[(int)E_translate.LANG_COMMON_AS_NOOBLACH] = "Suppress objective achievements";
-            lang[(int)E_translate.LANG_COMMON_AS_NOOBLQUEST] = "Suppress objective quests";
-            lang[(int)E_translate.LANG_COMMON_AS_NOCOMBATTEXT] = "Suppress floating combat text";
-            lang[(int)E_translate.LANG_COMMON_AS_CUR] = "cur";
-            lang[(int)E_translate.LANG_COMMON_AS_REC] = "rec";
-            lang[(int)E_translate.LANG_COMMON_AS_LOGSINVALID] = "Logs will be invalid";
-            lang[(int)E_translate.LANG_COMMON_AS_MAPRELOAD] = "requires map reload";
-            lang[(int)E_translate.LANG_COMMON_AS_NOOBLEVENT] = "Suppress objective events";
-            lang[(int)E_translate.LANG_COMMON_AS_SLOWVATOOLTIP] = "Warning: results unpredictable";
-            lang[(int)E_translate.LANG_COMMON_AS_SLOWVA] = "Slow worldstep when window inactive";
-            lang[(int)E_translate.LANG_COMMON_AS_OPTSEXTRASTOOLTIP] = "Options provided by extras dll";
-            lang[(int)E_translate.LANG_COMMON_AS_SAVEPROFKEYBINDS] = "Save/restore some profession keybinds";
-            lang[(int)E_translate.LANG_COMMON_AS_SAVEPROFKEYBINDSTOOLTIP] = "Automatically load last keybinds on map\nenter, and save on map exit\n(skills group, stow weapon)";
+
+
+
             return lang;
         }
 

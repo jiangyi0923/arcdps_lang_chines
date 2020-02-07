@@ -23,6 +23,19 @@ namespace WindowsFormsApp2
             dataTable.Columns.Add(new DataColumn("英文", typeof(System.String)));
             dataTable.Columns.Add(new DataColumn("中文", typeof(System.String)));
             dataGridView1.DataSource = dataTable;
+            if (!File.Exists(@"./arcdps_lang.ini"))
+            {
+                //解压
+                byte[] Save = Properties.Resources.arcdps_lang;
+                FileStream fsObj = new FileStream(@"./arcdps_lang.ini", FileMode.CreateNew);
+                fsObj.Write(Save, 0, Save.Length);
+                fsObj.Close();
+                Jiaz();
+            }
+            else
+            {
+                Jiaz();
+            }
         }
 
         
@@ -43,16 +56,22 @@ namespace WindowsFormsApp2
                 }
             }
             ini2.Save();
+            File.Copy(@"./arcdps_lang_1.ini", @"./arcdps_lang.ini", true);
         }
         Class1 class1 = new Class1();
         private void Button2_Click(object sender, EventArgs e)
+        {
+            Jiaz();
+        }
+
+        public void Jiaz()
         {
             dataTable.Clear();
             ini.Load();
             for (int i = 0; i < 900; i++)
             {
-                
-                if (ini.GetValue(i.ToString(), "lang","") !="" || class1.Lvs_()[i] != null)
+
+                if (ini.GetValue(i.ToString(), "lang", "") != "" || class1.Lvs_()[i] != null)
                 {
                     {
                         textBox1.AppendText(i + "=" + ini.GetValue(i.ToString(), "lang") + "\r\n");
@@ -61,7 +80,5 @@ namespace WindowsFormsApp2
                 }
             }
         }
-
-        
     }
 }
