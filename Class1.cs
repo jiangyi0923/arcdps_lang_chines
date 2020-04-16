@@ -10,6 +10,7 @@ namespace WindowsFormsApp2
     {
         public  enum E_translate
         {
+            /* program */
             LANG_CORE = 1,
 
             /* common: professions */
@@ -54,7 +55,7 @@ namespace WindowsFormsApp2
             LANG_COMMON_SKILLS_NINETY,
             LANG_COMMON_SKILLS_FIFTY,
             LANG_COMMON_SKILLS_MOVING,
-            LANG_COMMON_SKILLS_FLANKING,
+            LANG_COMMON_SKILLS_FLANG_KING,
             LANG_COMMON_SKILLS_CRITS,
             LANG_COMMON_SKILLS_VALUE,
             LANG_COMMON_SKILLS_MIN,
@@ -65,7 +66,7 @@ namespace WindowsFormsApp2
             LANG_COMMON_SKILLS_NOSKILLS,
             LANG_COMMON_SKILLS_REMOVED,
             LANG_COMMON_SKILLS_RESISTED,
-            LANG_COMMON_SKILLS_GLANCE,
+            LANG_COMMON_SKILLS_GLANG_CE,
             LANG_COMMON_SKILLS_MISSES,
             LANG_COMMON_SKILLS_NOTARGETS,
 
@@ -185,14 +186,14 @@ namespace WindowsFormsApp2
             LANG_PAN_SUMMARY_NINETYPCT,
             LANG_PAN_SUMMARY_FIFTYPCT,
             LANG_PAN_SUMMARY_MOVINGPCT,
-            LANG_PAN_SUMMARY_FLANKPCT,
+            LANG_PAN_SUMMARY_FLANG_KPCT,
             LANG_PAN_SUMMARY_CANCELTIME,
             LANG_PAN_SUMMARY_RESCOUNT,
             LANG_PAN_SUMMARY_RESTIME,
             LANG_PAN_SUMMARY_DOWNCOUNT,
             LANG_PAN_SUMMARY_CLEANSEDOUT,
             LANG_PAN_SUMMARY_STRIPPEDOUT,
-            LANG_PAN_SUMMARY_GLANCEPCT,
+            LANG_PAN_SUMMARY_GLANG_CEPCT,
             LANG_PAN_SUMMARY_EVADES,
             LANG_PAN_SUMMARY_INTERRUPTS,
             LANG_PAN_SUMMARY_MISSES,
@@ -581,398 +582,400 @@ namespace WindowsFormsApp2
 
         public string[] Lvs_()
         {
-            string[] lang = new string[2048];
+            string[] LANG = new string[2048];
 
 
             ///
-            lang[(int)E_translate.LANG_CORE] = "core";
+            ///LANG[(int)E_translate.(int)E_translate.LANG_CORE] = "core";
+
+            LANG[(int)E_translate.LANG_CORE] = "core";
 
             /* common: professions */
-            lang[(int)E_translate.LANG_COMMON_PROF_GUARDIAN] = "Gdn";
-            lang[(int)E_translate.LANG_COMMON_PROF_DRAGONHUNTER] = "Dgh";
-            lang[(int)E_translate.LANG_COMMON_PROF_WARRIOR] = "War";
-            lang[(int)E_translate.LANG_COMMON_PROF_BERSERKER] = "Brs";
-            lang[(int)E_translate.LANG_COMMON_PROF_ENGINEER] = "Eng";
-            lang[(int)E_translate.LANG_COMMON_PROF_SCRAPPER] = "Scr";
-            lang[(int)E_translate.LANG_COMMON_PROF_RANGER] = "Rgr";
-            lang[(int)E_translate.LANG_COMMON_PROF_DRUID] = "Dru";
-            lang[(int)E_translate.LANG_COMMON_PROF_THIEF] = "Thf";
-            lang[(int)E_translate.LANG_COMMON_PROF_DAREDEVIL] = "Dar";
-            lang[(int)E_translate.LANG_COMMON_PROF_ELEMENTALIST] = "Ele";
-            lang[(int)E_translate.LANG_COMMON_PROF_TEMPEST] = "Tmp";
-            lang[(int)E_translate.LANG_COMMON_PROF_MESMER] = "Mes";
-            lang[(int)E_translate.LANG_COMMON_PROF_CHRONOMANCER] = "Chr";
-            lang[(int)E_translate.LANG_COMMON_PROF_NECROMANCER] = "Nec";
-            lang[(int)E_translate.LANG_COMMON_PROF_REAPER] = "Rea";
-            lang[(int)E_translate.LANG_COMMON_PROF_RECKONER] = "Rev";
-            lang[(int)E_translate.LANG_COMMON_PROF_HERALD] = "Her";
-            lang[(int)E_translate.LANG_COMMON_PROF_FIREBRAND] = "Fbd";
-            lang[(int)E_translate.LANG_COMMON_PROF_SPELLBREAKER] = "Spb";
-            lang[(int)E_translate.LANG_COMMON_PROF_HOLOSMITH] = "Hls";
-            lang[(int)E_translate.LANG_COMMON_PROF_SOULBEAST] = "Slb";
-            lang[(int)E_translate.LANG_COMMON_PROF_DEADEYE] = "Ded";
-            lang[(int)E_translate.LANG_COMMON_PROF_WEAVER] = "Wea";
-            lang[(int)E_translate.LANG_COMMON_PROF_MIRAGE] = "Mir";
-            lang[(int)E_translate.LANG_COMMON_PROF_SCOURGE] = "Scg";
-            lang[(int)E_translate.LANG_COMMON_PROF_RENEGADE] = "Ren";
+            LANG[(int)E_translate.LANG_COMMON_PROF_GUARDIAN] = "Gdn";
+            LANG[(int)E_translate.LANG_COMMON_PROF_DRAGONHUNTER] = "Dgh";
+            LANG[(int)E_translate.LANG_COMMON_PROF_WARRIOR] = "War";
+            LANG[(int)E_translate.LANG_COMMON_PROF_BERSERKER] = "Brs";
+            LANG[(int)E_translate.LANG_COMMON_PROF_ENGINEER] = "Eng";
+            LANG[(int)E_translate.LANG_COMMON_PROF_SCRAPPER] = "Scr";
+            LANG[(int)E_translate.LANG_COMMON_PROF_RANGER] = "Rgr";
+            LANG[(int)E_translate.LANG_COMMON_PROF_DRUID] = "Dru";
+            LANG[(int)E_translate.LANG_COMMON_PROF_THIEF] = "Thf";
+            LANG[(int)E_translate.LANG_COMMON_PROF_DAREDEVIL] = "Dar";
+            LANG[(int)E_translate.LANG_COMMON_PROF_ELEMENTALIST] = "Ele";
+            LANG[(int)E_translate.LANG_COMMON_PROF_TEMPEST] = "Tmp";
+            LANG[(int)E_translate.LANG_COMMON_PROF_MESMER] = "Mes";
+            LANG[(int)E_translate.LANG_COMMON_PROF_CHRONOMANCER] = "Chr";
+            LANG[(int)E_translate.LANG_COMMON_PROF_NECROMANCER] = "Nec";
+            LANG[(int)E_translate.LANG_COMMON_PROF_REAPER] = "Rea";
+            LANG[(int)E_translate.LANG_COMMON_PROF_RECKONER] = "Rev";
+            LANG[(int)E_translate.LANG_COMMON_PROF_HERALD] = "Her";
+            LANG[(int)E_translate.LANG_COMMON_PROF_FIREBRAND] = "Fbd";
+            LANG[(int)E_translate.LANG_COMMON_PROF_SPELLBREAKER] = "Spb";
+            LANG[(int)E_translate.LANG_COMMON_PROF_HOLOSMITH] = "Hls";
+            LANG[(int)E_translate.LANG_COMMON_PROF_SOULBEAST] = "Slb";
+            LANG[(int)E_translate.LANG_COMMON_PROF_DEADEYE] = "Ded";
+            LANG[(int)E_translate.LANG_COMMON_PROF_WEAVER] = "Wea";
+            LANG[(int)E_translate.LANG_COMMON_PROF_MIRAGE] = "Mir";
+            LANG[(int)E_translate.LANG_COMMON_PROF_SCOURGE] = "Scg";
+            LANG[(int)E_translate.LANG_COMMON_PROF_RENEGADE] = "Ren";
 
             /* common: skill itemization */
-            lang[(int)E_translate.LANG_COMMON_SKILLS_ACTIVATIONS] = "activations";
-            lang[(int)E_translate.LANG_COMMON_SKILLS_CANCELS] = "cancels";
-            lang[(int)E_translate.LANG_COMMON_SKILLS_WASTED] = "time wasted";
-            lang[(int)E_translate.LANG_COMMON_SKILLS_HITSCOMPRESS] = "hits (cmprs)";
-            lang[(int)E_translate.LANG_COMMON_SKILLS_HITSTOTAL] = "hits (dmg)";
-            lang[(int)E_translate.LANG_COMMON_SKILLS_NINETY] = "over 90";
-            lang[(int)E_translate.LANG_COMMON_SKILLS_FIFTY] = "under 50";
-            lang[(int)E_translate.LANG_COMMON_SKILLS_MOVING] = "moving";
-            lang[(int)E_translate.LANG_COMMON_SKILLS_FLANKING] = "flanking";
-            lang[(int)E_translate.LANG_COMMON_SKILLS_CRITS] = "crit";
-            lang[(int)E_translate.LANG_COMMON_SKILLS_VALUE] = "total";
-            lang[(int)E_translate.LANG_COMMON_SKILLS_MIN] = "min";
-            lang[(int)E_translate.LANG_COMMON_SKILLS_AVG] = "avg";
-            lang[(int)E_translate.LANG_COMMON_SKILLS_MAX] = "max";
-            lang[(int)E_translate.LANG_COMMON_SKILLS_APXDMG] = "apx dmg";
-            lang[(int)E_translate.LANG_COMMON_SKILLS_OVERSTACK] = "overstack";
-            lang[(int)E_translate.LANG_COMMON_SKILLS_NOSKILLS] = "No skills logged";
-            lang[(int)E_translate.LANG_COMMON_SKILLS_REMOVED] = "removed";
-            lang[(int)E_translate.LANG_COMMON_SKILLS_RESISTED] = "resisted";
-            lang[(int)E_translate.LANG_COMMON_SKILLS_GLANCE] = "gLANG_Ce";
-            lang[(int)E_translate.LANG_COMMON_SKILLS_MISSES] = "misses";
-            lang[(int)E_translate.LANG_COMMON_SKILLS_NOTARGETS] = "No targets logged";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS_ACTIVATIONS] = "activations";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS_CANCELS] = "cancels";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS_WASTED] = "time wasted";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS_HITSCOMPRESS] = "hits (cmprs)";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS_HITSTOTAL] = "hits (dmg)";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS_NINETY] = "over 90";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS_FIFTY] = "under 50";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS_MOVING] = "moving";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS_FLANG_KING] = "fLANG_king";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS_CRITS] = "crit";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS_VALUE] = "total";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS_MIN] = "min";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS_AVG] = "avg";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS_MAX] = "max";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS_APXDMG] = "apx dmg";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS_OVERSTACK] = "overstack";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS_NOSKILLS] = "No skills logged";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS_REMOVED] = "removed";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS_RESISTED] = "resisted";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS_GLANG_CE] = "gLANG_ce";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS_MISSES] = "misses";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS_NOTARGETS] = "No targets logged";
 
             /* common: skills 2 */
-            lang[(int)E_translate.LANG_COMMON_SKILLS2_NOEVENTS] = "No events";
-            lang[(int)E_translate.LANG_COMMON_SKILLS2_SHIELDED] = "shielded";
-            lang[(int)E_translate.LANG_COMMON_SKILLS2_HITSANY] = "hits (all)";
-            lang[(int)E_translate.LANG_COMMON_SKILLS2_DMGPHYS] = "dmg (phys)";
-            lang[(int)E_translate.LANG_COMMON_SKILLS2_DMGBUFF] = "dmg (buff)";
-            lang[(int)E_translate.LANG_COMMON_SKILLS2_CHANNELED] = "time cast";
-            lang[(int)E_translate.LANG_COMMON_SKILLS2_PROTECTED] = "protected";
-            lang[(int)E_translate.LANG_COMMON_SKILLS2_KILLINGBLOWS] = "killed";
-            lang[(int)E_translate.LANG_COMMON_SKILLS2_DOWNEDS] = "downed";
-            lang[(int)E_translate.LANG_COMMON_SKILLS2_VALUESHIELD] = "shield total";
-            lang[(int)E_translate.LANG_COMMON_SKILLS2_BLOCKS] = "blocks";
-            lang[(int)E_translate.LANG_COMMON_SKILLS2_EVADES] = "evades";
-            lang[(int)E_translate.LANG_COMMON_SKILLS2_ABSORBS] = "absorbs";
-            lang[(int)E_translate.LANG_COMMON_SKILLS2_ZEROES] = "zeroes";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS2_NOEVENTS] = "No events";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS2_SHIELDED] = "shielded";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS2_HITSANY] = "hits (all)";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS2_DMGPHYS] = "dmg (phys)";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS2_DMGBUFF] = "dmg (buff)";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS2_CHANNELED] = "time cast";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS2_PROTECTED] = "protected";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS2_KILLINGBLOWS] = "killed";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS2_DOWNEDS] = "downed";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS2_VALUESHIELD] = "shield total";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS2_BLOCKS] = "blocks";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS2_EVADES] = "evades";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS2_ABSORBS] = "absorbs";
+            LANG[(int)E_translate.LANG_COMMON_SKILLS2_ZEROES] = "zeroes";
 
             /* common: custom skills */
-            lang[(int)E_translate.LANG_COMMON_CSK_DODGE] = "Dodge";
+            LANG[(int)E_translate.LANG_COMMON_CSK_DODGE] = "Dodge";
 
             /* panels: dps */
-            lang[(int)E_translate.LANG_PAN_PERSONALDPS_HEADER] = "Self Stats";
-            lang[(int)E_translate.LANG_PAN_PERSONALDPS_DAMAGE] = "damage";
-            lang[(int)E_translate.LANG_PAN_PERSONALDPS_HEALING] = "healing";
-            lang[(int)E_translate.LANG_PAN_PERSONALDPS_HISTLEFT] = "current";
-            lang[(int)E_translate.LANG_PAN_PERSONALDPS_HISTRIGHT] = "current";
-            lang[(int)E_translate.LANG_PAN_PERSONALDPS_SHIELDS] = "barrier";
+            LANG[(int)E_translate.LANG_PAN_PERSONALDPS_HEADER] = "Self Stats";
+            LANG[(int)E_translate.LANG_PAN_PERSONALDPS_DAMAGE] = "damage";
+            LANG[(int)E_translate.LANG_PAN_PERSONALDPS_HEALING] = "healing";
+            LANG[(int)E_translate.LANG_PAN_PERSONALDPS_HISTLEFT] = "current";
+            LANG[(int)E_translate.LANG_PAN_PERSONALDPS_HISTRIGHT] = "current";
+            LANG[(int)E_translate.LANG_PAN_PERSONALDPS_SHIELDS] = "barrier";
 
             /* panels: skills */
-            lang[(int)E_translate.LANG_PAN_PERSONALSKILLS_HEADER] = "Self Skills";
+            LANG[(int)E_translate.LANG_PAN_PERSONALSKILLS_HEADER] = "Self Skills";
 
             /* panels: healthbar */
-            lang[(int)E_translate.LANG_PAN_HEALTHBAR_HEADER] = "Healthbar";
+            LANG[(int)E_translate.LANG_PAN_HEALTHBAR_HEADER] = "Healthbar";
 
             /* panels: chcli */
-            lang[(int)E_translate.LANG_PAN_CHCLI_HEADER] = "Area Stats";
-            lang[(int)E_translate.LANG_PAN_CHCLI_DISABLED] = "Disabled on out-of-party players";
-            lang[(int)E_translate.LANG_PAN_CHCLI_NOPLAYERS] = "No players in range";
-            lang[(int)E_translate.LANG_PAN_CHCLI_HISTLEFT] = "current";
-            lang[(int)E_translate.LANG_PAN_CHCLI_HISTRIGHT] = "current";
+            LANG[(int)E_translate.LANG_PAN_CHCLI_HEADER] = "Area Stats";
+            LANG[(int)E_translate.LANG_PAN_CHCLI_DISABLED] = "Disabled on out-of-party players";
+            LANG[(int)E_translate.LANG_PAN_CHCLI_NOPLAYERS] = "No players in range";
+            LANG[(int)E_translate.LANG_PAN_CHCLI_HISTLEFT] = "current";
+            LANG[(int)E_translate.LANG_PAN_CHCLI_HISTRIGHT] = "current";
 
             /* panels: summary */
-            lang[(int)E_translate.LANG_PAN_SUMMARY_HEADER] = "Summary";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_CBTTIME] = "combat time";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_ADPSOUT] = "dps out";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_ADPSIN] = "dps in";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_CRITPCT] = "crit";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_NINETYPCT] = "ninety";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_FIFTYPCT] = "fifty";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_MOVINGPCT] = "moving";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_FLANKPCT] = "flank";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_CANCELTIME] = "cancel time";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_RESCOUNT] = "res count";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_RESTIME] = "res time";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_DOWNCOUNT] = "down count";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_CLEANSEDOUT] = "cleanse out";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_STRIPPEDOUT] = "strip out";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_GLANCEPCT] = "gLANG_Ce";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_EVADES] = "evades";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_INTERRUPTS] = "interrupts";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_MISSES] = "misses";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_DODGE] = "dodges used";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_HIST] = "History";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_SQSHORT1] = "player must be";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_SQSHORT2] = "in party/squad";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_CLEANSEDIN] = "cleanse in";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_STRIPPEDIN] = "strip in";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_DOWNTIME] = "down time";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_CANCELCOUNT] = "cancel count";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_SHIELDPCT] = "shield";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_SHIELDEFF] = "shield eff";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_BLOCKS] = "blocks";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_ABSORBS] = "absorbs";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_CLEANSEDSELF] = "cleanse self";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_DURATION] = "duration";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_INTENSITY] = "intensity";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_PHYS] = "phys";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_COND] = "cond";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_DPSUPTIME] = "dps uptime";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_PROTPCT] = "prot";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_KILLINGBLOWS] = "killed";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_DOWNEDS] = "downed";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_DOWNEDPCT] = "down";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_ZEROES] = "zeroes";
-            lang[(int)E_translate.LANG_PAN_SUMMARY_DEATHCOUNT] = "death count";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_HEADER] = "Summary";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_CBTTIME] = "combat time";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_ADPSOUT] = "dps out";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_ADPSIN] = "dps in";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_CRITPCT] = "crit";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_NINETYPCT] = "ninety";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_FIFTYPCT] = "fifty";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_MOVINGPCT] = "moving";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_FLANG_KPCT] = "fLANG_k";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_CANCELTIME] = "cancel time";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_RESCOUNT] = "res count";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_RESTIME] = "res time";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_DOWNCOUNT] = "down count";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_CLEANSEDOUT] = "cleanse out";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_STRIPPEDOUT] = "strip out";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_GLANG_CEPCT] = "gLANG_ce";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_EVADES] = "evades";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_INTERRUPTS] = "interrupts";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_MISSES] = "misses";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_DODGE] = "dodges used";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_HIST] = "History";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_SQSHORT1] = "player must be";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_SQSHORT2] = "in party/squad";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_CLEANSEDIN] = "cleanse in";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_STRIPPEDIN] = "strip in";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_DOWNTIME] = "down time";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_CANCELCOUNT] = "cancel count";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_SHIELDPCT] = "shield";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_SHIELDEFF] = "shield eff";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_BLOCKS] = "blocks";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_ABSORBS] = "absorbs";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_CLEANSEDSELF] = "cleanse self";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_DURATION] = "duration";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_INTENSITY] = "intensity";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_PHYS] = "phys";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_COND] = "cond";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_DPSUPTIME] = "dps uptime";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_PROTPCT] = "prot";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_KILLINGBLOWS] = "killed";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_DOWNEDS] = "downed";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_DOWNEDPCT] = "down";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_ZEROES] = "zeroes";
+            LANG[(int)E_translate.LANG_PAN_SUMMARY_DEATHCOUNT] = "death count";
 
             /* panels: logger */
-            lang[(int)E_translate.LANG_PAN_LOGGER_HEADER] = "Log";
-            lang[(int)E_translate.LANG_PAN_LOGGER_HEADER_CBT] = "cbt";
-            lang[(int)E_translate.LANG_PAN_LOGGER_ENG] = "eng";
-            lang[(int)E_translate.LANG_PAN_LOGGER_GME] = "gme";
-            lang[(int)E_translate.LANG_PAN_LOGGER_FILTER] = "filter";
-            lang[(int)E_translate.LANG_PAN_LOGGER_RESQ] = "res.qdep";
-            lang[(int)E_translate.LANG_PAN_LOGGER_CBTQ] = "cbt.qdep";
-            lang[(int)E_translate.LANG_PAN_LOGGER_MBLK] = "m.blks";
-            lang[(int)E_translate.LANG_PAN_LOGGER_MSZ] = "m.sz";
-            lang[(int)E_translate.LANG_PAN_LOGGER_AG] = "lim.ag";
-            lang[(int)E_translate.LANG_PAN_LOGGER_CH] = "lim.ch";
-            lang[(int)E_translate.LANG_PAN_LOGGER_CEA] = "ces";
-            lang[(int)E_translate.LANG_PAN_LOGGER_GRC] = "grc";
-            lang[(int)E_translate.LANG_PAN_LOGGER_SCS] = "cbs";
-            lang[(int)E_translate.LANG_PAN_LOGGER_SCC] = "ccx";
-            lang[(int)E_translate.LANG_PAN_LOGGER_STG] = "tgc";
-            lang[(int)E_translate.LANG_PAN_LOGGER_SAG] = "scr";
-            lang[(int)E_translate.LANG_PAN_LOGGER_RTH] = "rth";
-            lang[(int)E_translate.LANG_PAN_LOGGER_CCS] = "ccs";
-            lang[(int)E_translate.LANG_PAN_LOGGER_HS] = "rs";
-            lang[(int)E_translate.LANG_PAN_LOGGER_UI0] = "ui0";
-            lang[(int)E_translate.LANG_PAN_LOGGER_UI1] = "ui1";
-            lang[(int)E_translate.LANG_PAN_LOGGER_HU] = "ru";
-            lang[(int)E_translate.LANG_PAN_LOGGER_CHANNEL] = "Channel";
-            lang[(int)E_translate.LANG_PAN_LOGGER_SIM] = "sim";
-            lang[(int)E_translate.LANG_PAN_LOGGER_MCI] = "mci";
-            lang[(int)E_translate.LANG_PAN_LOGGER_MCO] = "mco";
-            lang[(int)E_translate.LANG_PAN_LOGGER_LINES] = "lines";
-            lang[(int)E_translate.LANG_PAN_LOGGER_SUPPRESS] = "suppress logging";
-            lang[(int)E_translate.LANG_PAN_LOGGER_PERFTIME] = "perf.time";
-            lang[(int)E_translate.LANG_PAN_LOGGER_PERFUSE] = "perf.use";
-            lang[(int)E_translate.LANG_PAN_LOGGER_EVENTS] = "Events";
-            lang[(int)E_translate.LANG_PAN_LOGGER_CBTSTATECHANGE] = "statechange";
-            lang[(int)E_translate.LANG_PAN_LOGGER_CBTACTIVATION] = "activation";
-            lang[(int)E_translate.LANG_PAN_LOGGER_CBTBUFFREMOVE] = "buffremove";
-            lang[(int)E_translate.LANG_PAN_LOGGER_CBTBUFFAPPLY] = "buffapply";
-            lang[(int)E_translate.LANG_PAN_LOGGER_CBTBUFFDAMAGE] = "buffdamage";
-            lang[(int)E_translate.LANG_PAN_LOGGER_CBTBUFFHEAL] = "buffheal";
-            lang[(int)E_translate.LANG_PAN_LOGGER_CBTDIRECTDAMAGE] = "directdamage";
-            lang[(int)E_translate.LANG_PAN_LOGGER_CBTDIRECTHEAL] = "directheal";
-            lang[(int)E_translate.LANG_PAN_LOGGER_DEBUG] = "Debug";
-            lang[(int)E_translate.LANG_PAN_LOGGER_CBTMINION] = "minion";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_HEADER] = "Log";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_HEADER_CBT] = "cbt";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_ENG] = "eng";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_GME] = "gme";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_FILTER] = "filter";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_RESQ] = "res.qdep";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_CBTQ] = "cbt.qdep";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_MBLK] = "m.blks";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_MSZ] = "m.sz";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_AG] = "lim.ag";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_CH] = "lim.ch";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_CEA] = "ces";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_GRC] = "grc";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_SCS] = "cbs";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_SCC] = "ccx";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_STG] = "tgc";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_SAG] = "scr";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_RTH] = "rth";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_CCS] = "ccs";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_HS] = "rs";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_UI0] = "ui0";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_UI1] = "ui1";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_HU] = "ru";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_CHANNEL] = "Channel";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_SIM] = "sim";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_MCI] = "mci";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_MCO] = "mco";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_LINES] = "lines";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_SUPPRESS] = "suppress logging";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_PERFTIME] = "perf.time";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_PERFUSE] = "perf.use";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_EVENTS] = "Events";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_CBTSTATECHANGE] = "statechange";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_CBTACTIVATION] = "activation";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_CBTBUFFREMOVE] = "buffremove";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_CBTBUFFAPPLY] = "buffapply";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_CBTBUFFDAMAGE] = "buffdamage";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_CBTBUFFHEAL] = "buffheal";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_CBTDIRECTDAMAGE] = "directdamage";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_CBTDIRECTHEAL] = "directheal";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_DEBUG] = "Debug";
+            LANG[(int)E_translate.LANG_PAN_LOGGER_CBTMINION] = "minion";
 
             /* panels: metrics */
-            lang[(int)E_translate.LANG_PAN_METRICS_HEADER] = "Metrics";
-            lang[(int)E_translate.LANG_PAN_METRICS_FPS] = "F";
-            lang[(int)E_translate.LANG_PAN_METRICS_PING] = "P";
-            lang[(int)E_translate.LANG_PAN_METRICS_MAPTYPE] = "Map.type";
-            lang[(int)E_translate.LANG_PAN_METRICS_MAPID] = "Map.ID";
-            lang[(int)E_translate.LANG_PAN_METRICS_MAPLV] = "Map.level";
-            lang[(int)E_translate.LANG_PAN_METRICS_BUILDGW] = "B.gw2";
-            lang[(int)E_translate.LANG_PAN_METRICS_BUILDARC] = "B.arc";
-            lang[(int)E_translate.LANG_PAN_METRICS_TICK] = "R";
+            LANG[(int)E_translate.LANG_PAN_METRICS_HEADER] = "Metrics";
+            LANG[(int)E_translate.LANG_PAN_METRICS_FPS] = "F";
+            LANG[(int)E_translate.LANG_PAN_METRICS_PING] = "P";
+            LANG[(int)E_translate.LANG_PAN_METRICS_MAPTYPE] = "Map.type";
+            LANG[(int)E_translate.LANG_PAN_METRICS_MAPID] = "Map.ID";
+            LANG[(int)E_translate.LANG_PAN_METRICS_MAPLV] = "Map.level";
+            LANG[(int)E_translate.LANG_PAN_METRICS_BUILDGW] = "B.gw2";
+            LANG[(int)E_translate.LANG_PAN_METRICS_BUILDARC] = "B.arc";
+            LANG[(int)E_translate.LANG_PAN_METRICS_TICK] = "R";
 
             /* panels: buffs */
-            lang[(int)E_translate.LANG_PAN_BUFFS_HEADER] = "Buffs";
-            lang[(int)E_translate.LANG_PAN_BUFFS_WARNING] = "WARNING: CPU HEAVY";
+            LANG[(int)E_translate.LANG_PAN_BUFFS_HEADER] = "Buffs";
+            LANG[(int)E_translate.LANG_PAN_BUFFS_WARNING] = "WARNING: CPU HEAVY";
 
             /* panels: detail */
-            lang[(int)E_translate.LANG_PAN_DETAIL_HEADER] = "Detail";
-            lang[(int)E_translate.LANG_PAN_DETAIL_MIN] = "min";
-            lang[(int)E_translate.LANG_PAN_DETAIL_MAX] = "max";
-            lang[(int)E_translate.LANG_PAN_DETAIL_ELAPSED] = "elapsed";
-            lang[(int)E_translate.LANG_PAN_DETAIL_REMOVED] = "Agent doesn't exist";
+            LANG[(int)E_translate.LANG_PAN_DETAIL_HEADER] = "Detail";
+            LANG[(int)E_translate.LANG_PAN_DETAIL_MIN] = "min";
+            LANG[(int)E_translate.LANG_PAN_DETAIL_MAX] = "max";
+            LANG[(int)E_translate.LANG_PAN_DETAIL_ELAPSED] = "elapsed";
+            LANG[(int)E_translate.LANG_PAN_DETAIL_REMOVED] = "Agent doesn't exist";
 
             /* panels: options */
-            lang[(int)E_translate.LANG_PAN_OPTIONS_HEADER] = "Arcdps Options";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_PANELS] = "Windows";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_SUMMARIES] = "Tooltip";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_BASIC] = "General";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_SM_ADPSOUT] = "dps out";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_SM_ADPSIN] = "dps in";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_SM_BUFFS] = "buffs";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_SM_RATES] = "rates";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_SM_AGSTATES] = "states";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_SM_BUFFEVENTS] = "buff events";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_SM_RESULTS] = "results";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_BS_LOCKTARGET] = "Lock target to encounter NPC";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_BS_SAVELOGS] = "Save EVTC logs after encounters";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_BS_NPCINPATH] = "Use NPC name in EVTC save path";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_BS_COMPRESS] = "Compress logs with PowerShell (Win10)";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_BS_GUILDINPATH] = "Use guild in EVTC save path";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_BS_BGBARS] = "Draw bars";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_BS_PLAYERINPATH] = "Use player name in EVTC save path";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_BS_ALTUIMOVELOCK] = "Moving requires modifiers";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_BS_ALTUICLICKLOCK] = "Clicking requires modifiers (unsupported)";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_BS_LOGGING] = "Logging";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_SM_HIDEZEROBUFFS] = "hide empty buffs";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_BS_FASTCLOSE] = "Esc closes windows";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_BS_LOGS] = "Logs (open folder)";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_BS_CONFIG] = "Config (open folder)";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_BS_STYLE] = "Style";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_BS_COLOURSIMGUI] = "Colours: ImGui";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_BS_COLOURSARC] = "Colours: Arc";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_BS_COLOURSPROF] = "Colours: Profession";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_BS_COLOURSSQUAD] = "Colours: Squad";
-            lang[(int)E_translate.LANG_PAN_OPTIONS_BS_APPEARANCE] = "Appearance";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_HEADER] = "Arcdps Options";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_PANELS] = "Windows";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_SUMMARIES] = "Tooltip";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_BASIC] = "General";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_SM_ADPSOUT] = "dps out";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_SM_ADPSIN] = "dps in";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_SM_BUFFS] = "buffs";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_SM_RATES] = "rates";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_SM_AGSTATES] = "states";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_SM_BUFFEVENTS] = "buff events";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_SM_RESULTS] = "results";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_BS_LOCKTARGET] = "Lock target to encounter NPC";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_BS_SAVELOGS] = "Save EVTC logs after encounters";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_BS_NPCINPATH] = "Use NPC name in EVTC save path";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_BS_COMPRESS] = "Compress logs with PowerShell (Win10)";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_BS_GUILDINPATH] = "Use guild in EVTC save path";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_BS_BGBARS] = "Draw bars";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_BS_PLAYERINPATH] = "Use player name in EVTC save path";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_BS_ALTUIMOVELOCK] = "Moving requires modifiers";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_BS_ALTUICLICKLOCK] = "Clicking requires modifiers (unsupported)";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_BS_LOGGING] = "Logging";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_SM_HIDEZEROBUFFS] = "hide empty buffs";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_BS_FASTCLOSE] = "Esc closes windows";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_BS_LOGS] = "Logs (open folder)";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_BS_CONFIG] = "Config (open folder)";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_BS_STYLE] = "Style";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_BS_COLOURSIMGUI] = "Colours: ImGui";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_BS_COLOURSARC] = "Colours: Arc";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_BS_COLOURSPROF] = "Colours: Profession";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_BS_COLOURSSQUAD] = "Colours: Squad";
+            LANG[(int)E_translate.LANG_PAN_OPTIONS_BS_APPEARANCE] = "Appearance";
 
             /* common assorted out of lazy */
-            lang[(int)E_translate.LANG_COMMON_AS_SUCCESS] = "success";
-            lang[(int)E_translate.LANG_COMMON_AS_FAIL] = "failed";
-            lang[(int)E_translate.LANG_COMMON_AS_PADDING] = "padding";
-            lang[(int)E_translate.LANG_COMMON_AS_BACKGROUND] = "background";
-            lang[(int)E_translate.LANG_COMMON_AS_ONELINE] = "one line";
-            lang[(int)E_translate.LANG_COMMON_AS_ALIGNRIGHT] = "align right";
-            lang[(int)E_translate.LANG_COMMON_AS_RESET] = "Reset";
-            lang[(int)E_translate.LANG_COMMON_AS_TOTAL] = "total";
-            lang[(int)E_translate.LANG_COMMON_AS_CLEAVE] = "cleave";
-            lang[(int)E_translate.LANG_COMMON_AS_TARGET] = "target";
-            lang[(int)E_translate.LANG_COMMON_AS_IN] = "in";
-            lang[(int)E_translate.LANG_COMMON_AS_TITLE] = "title bar";
-            lang[(int)E_translate.LANG_COMMON_AS_NOHISTORY] = "no history";
-            lang[(int)E_translate.LANG_COMMON_AS_AUTOSIZE] = "auto size";
-            lang[(int)E_translate.LANG_COMMON_AS_LISTLENGTH] = "max displayed";
-            lang[(int)E_translate.LANG_COMMON_AS_SCROLLBAR] = "scroll bar";
-            lang[(int)E_translate.LANG_COMMON_AS_FRIENDLY] = "friendly";
-            lang[(int)E_translate.LANG_COMMON_AS_LIST] = "List";
-            lang[(int)E_translate.LANG_COMMON_AS_SKILLS] = "skills";
-            lang[(int)E_translate.LANG_COMMON_AS_TARGETS] = "targets";
-            lang[(int)E_translate.LANG_COMMON_AS_LOG] = "log";
-            lang[(int)E_translate.LANG_COMMON_AS_EXTRAS] = "Extras";
-            lang[(int)E_translate.LANG_COMMON_AS_VERSIONCHECK] = "Check recommended minimum version";
-            lang[(int)E_translate.LANG_COMMON_AS_NOOBLACH] = "Suppress objective achievements";
-            lang[(int)E_translate.LANG_COMMON_AS_NOOBLQUEST] = "Suppress objective quests";
-            lang[(int)E_translate.LANG_COMMON_AS_NOCOMBATTEXT] = "Suppress floating combat text";
-            lang[(int)E_translate.LANG_COMMON_AS_CUR] = "cur";
-            lang[(int)E_translate.LANG_COMMON_AS_REC] = "rec";
-            lang[(int)E_translate.LANG_COMMON_AS_LOGSINVALID] = "Logs will be invalid";
-            lang[(int)E_translate.LANG_COMMON_AS_MAPRELOAD] = "requires map reload";
-            lang[(int)E_translate.LANG_COMMON_AS_NOOBLEVENT] = "Suppress objective events";
-            lang[(int)E_translate.LANG_COMMON_AS_SLOWVATOOLTIP] = "Warning: results unpredictable";
-            lang[(int)E_translate.LANG_COMMON_AS_SLOWVA] = "Slow worldstep when window inactive";
-            lang[(int)E_translate.LANG_COMMON_AS_OPTSEXTRASTOOLTIP] = "Options provided by extras dll";
-            lang[(int)E_translate.LANG_COMMON_AS_SAVEPROFKEYBINDS] = "Save/restore some profession keybinds";
-            lang[(int)E_translate.LANG_COMMON_AS_SAVEPROFKEYBINDSTOOLTIP] = "Automatically load last keybinds on map\nenter, and save on map exit\n(skills group, stow weapon)";
-            lang[(int)E_translate.LANG_COMMON_AS_COMBATTIME] = "combat time";
-            lang[(int)E_translate.LANG_COMMON_AS_SORTDPS] = "sort per second";
-            lang[(int)E_translate.LANG_COMMON_AS_STYLE] = "Style";
-            lang[(int)E_translate.LANG_COMMON_AS_BUFFS] = "buffs";
-            lang[(int)E_translate.LANG_COMMON_AS_SORTTARGET] = "sort vs target";
-            lang[(int)E_translate.LANG_COMMON_AS_DISPLAY] = "Display";
-            lang[(int)E_translate.LANG_COMMON_AS_COLOURSUBGROUP] = "colour by subgroup";
-            lang[(int)E_translate.LANG_COMMON_AS_FORMATTOOLTIP] = "@1: cleave total\n@2: cleave per second\n@3: cleave percent\n@4: target total\n@5: target per second\n@6: target percent";
-            lang[(int)E_translate.LANG_COMMON_AS_PLAYERFORMAT] = "stats format";
-            lang[(int)E_translate.LANG_COMMON_AS_DEBUG] = "debug";
-            lang[(int)E_translate.LANG_COMMON_AS_DATA] = "Data";
-            lang[(int)E_translate.LANG_COMMON_AS_LABELS] = "labels";
-            lang[(int)E_translate.LANG_COMMON_AS_NUMBERS] = "index numbers";
-            lang[(int)E_translate.LANG_COMMON_AS_PROF] = "profession";
-            lang[(int)E_translate.LANG_COMMON_AS_TOPSKILLS] = "top skills";
-            lang[(int)E_translate.LANG_COMMON_AS_TOPTARGETS] = "top targets";
-            lang[(int)E_translate.LANG_COMMON_AS_WIDTH] = "window width";
-            lang[(int)E_translate.LANG_COMMON_AS_DAMAGE] = "Damage";
-            lang[(int)E_translate.LANG_COMMON_AS_TAKEN] = "taken";
-            lang[(int)E_translate.LANG_COMMON_AS_TITLEMATCHFRAME] = "use window colour for title bar";
-            lang[(int)E_translate.LANG_COMMON_AS_TITLEFORMATTOOLTIP] = "@1: cleave per second\n@2: cleave total\n@3: target per second\n@4: target total\n@5: target name";
-            lang[(int)E_translate.LANG_COMMON_AS_TITLEFORMAT] = "title bar format";
-            lang[(int)E_translate.LANG_COMMON_AS_INTERVAL] = "interval";
-            lang[(int)E_translate.LANG_COMMON_AS_NAMECHARWIDTH] = "max name length";
-            lang[(int)E_translate.LANG_COMMON_AS_SHOWADVANCEDSTYLEOPTS] = "show advanced style options";
-            lang[(int)E_translate.LANG_COMMON_AS_SHOWADVANCEDSTYLEOPTSINFO] = "Warning: modifying ImGui style\nmay not do what you want it to do.\nThis is unsupported and no layout\ncompatibility is guaranteed";
-            lang[(int)E_translate.LANG_COMMON_AS_SHOWADVANCEDSTYLEOPTSCOL] = "Some colours are hardcoded and\ncannot be changed";
-            lang[(int)E_translate.LANG_COMMON_AS_SHOWADVANCEDSTYLEOPTSPREC] = "Colours defined in config ini\ntake precedence when loaded";
-            lang[(int)E_translate.LANG_COMMON_AS_NAME] = "name";
-            lang[(int)E_translate.LANG_COMMON_AS_NAMECOLPROF] = "name colour using profession";
-            lang[(int)E_translate.LANG_COMMON_AS_NAMECOLSUBGROUP] = "name colour using subgroup";
-            lang[(int)E_translate.LANG_COMMON_AS_SORTSUBGROUP] = "sort by subgroup";
-            lang[(int)E_translate.LANG_COMMON_AS_MEMGW2] = "M.gw2";
-            lang[(int)E_translate.LANG_COMMON_AS_MEMARC] = "M.arc";
-            lang[(int)E_translate.LANG_COMMON_AS_DISTCBT] = "Dist.cbt";
-            lang[(int)E_translate.LANG_COMMON_AS_DISTOOC] = "Dist.ooc";
-            lang[(int)E_translate.LANG_COMMON_AS_TIMECBT] = "Time.cbt";
-            lang[(int)E_translate.LANG_COMMON_AS_TIMEOOC] = "Time.ooc";
-            lang[(int)E_translate.LANG_COMMON_AS_DETAILED] = "detailed";
-            lang[(int)E_translate.LANG_COMMON_AS_SIMDISABLED] = "simulation disabled";
-            lang[(int)E_translate.LANG_COMMON_AS_SORTADV] = "sort advanced";
-            lang[(int)E_translate.LANG_COMMON_AS_SORTADVTOOLTIP] = "Advanced sort options override default\nsort options and player format strings,\nas well as require more CPU";
-            lang[(int)E_translate.LANG_COMMON_AS_SHOWADVANCEDSTYLEOPTSTOOLTIP] = "Changes to default style will\nnot retroactively apply to\nthese. Delete the appearance_ keys\nin the ini to reset";
-            lang[(int)E_translate.LANG_COMMON_AS_HISTORY] = "history";
-            lang[(int)E_translate.LANG_COMMON_AS_SORTADV_ADVANCED] = "Adv";
-            lang[(int)E_translate.LANG_COMMON_AS_SORTADV_FNNONE] = "none";
-            lang[(int)E_translate.LANG_COMMON_AS_SORTADV_FNDOWN] = "downeds";
-            lang[(int)E_translate.LANG_COMMON_AS_SORTADV_FNDOWNPERSIST] = "time between downeds";
-            lang[(int)E_translate.LANG_COMMON_AS_SORTADV_FNDEATH] = "deaths";
-            lang[(int)E_translate.LANG_COMMON_AS_SORTADV_FNDEATHPERSIST] = "time between deaths";
-            lang[(int)E_translate.LANG_COMMON_AS_SORTADV_FNRESCOUNT] = "res count";
-            lang[(int)E_translate.LANG_COMMON_AS_SORTADV_FNRESTIME] = "res time";
-            lang[(int)E_translate.LANG_COMMON_AS_SORTADV_FNCLEANSE] = "cleanses";
-            lang[(int)E_translate.LANG_COMMON_AS_SORTADV_FNSTRIP] = "strips";
-            lang[(int)E_translate.LANG_COMMON_AS_SORTADV_FNDPSOUTNEARPERSIST] = "dps out persist";
-            lang[(int)E_translate.LANG_COMMON_AS_SORTADV_FNDPSINNEARPERSIST] = "dps in persist";
-            lang[(int)E_translate.LANG_COMMON_AS_STATSEXCLUDE] = "stats exclude";
-            lang[(int)E_translate.LANG_COMMON_AS_STATSEXCLUDETOOLTIP] = "Exclusion applies to all area stats\nand details windows, aggregate and skills";
-            lang[(int)E_translate.LANG_COMMON_AS_STATSEXCLUDEACTIVE] = "excl";
-            lang[(int)E_translate.LANG_COMMON_AS_STATSEXCLUDEVSPLAYER] = "vs players";
-            lang[(int)E_translate.LANG_COMMON_AS_STATSEXCLUDEVSNPC] = "vs npcs";
-            lang[(int)E_translate.LANG_COMMON_AS_STATSEXCLUDEVSGADGET] = "vs gadgets";
-            lang[(int)E_translate.LANG_COMMON_AS_STATSEXCLUDEFROMPLAYER] = "from players";
-            lang[(int)E_translate.LANG_COMMON_AS_STATSEXCLUDEFROMNPC] = "from npcs";
-            lang[(int)E_translate.LANG_COMMON_AS_STATSEXCLUDEFROMGADGET] = "from gadgets";
-            lang[(int)E_translate.LANG_COMMON_AS_OPTSBASICTOOLTIP] = "Global interface options";
-            lang[(int)E_translate.LANG_COMMON_AS_OPTSLOGSTOOLTIP] = "Boss encounter logging options";
-            lang[(int)E_translate.LANG_COMMON_AS_OPTSPLAYERTOOLTIP] = "Player tooltips";
-            lang[(int)E_translate.LANG_COMMON_AS_OPTSDISPLAYTOOLTIP] = "Data display";
-            lang[(int)E_translate.LANG_COMMON_AS_OPTSSTYLETOOLTIP] = "Window style";
-            lang[(int)E_translate.LANG_COMMON_AS_PERSISTRESET] = "Reset persistent";
-            lang[(int)E_translate.LANG_COMMON_AS_SORTADV_FNDPSOUTNEARSQUAD] = "squad time dps out";
-            lang[(int)E_translate.LANG_COMMON_AS_SORTADV_FNDPSINNEARSQUAD] = "squad time dps in";
-            lang[(int)E_translate.LANG_COMMON_AS_ALWAYSSHOWWINDOWS] = "Always draw windows";
-            lang[(int)E_translate.LANG_COMMON_AS_PERSISTPARTYRESET] = "Reset persistent on party join/leave";
-            lang[(int)E_translate.LANG_COMMON_AS_PERSISTPROFRESET] = "Reset persistent on prof change";
-            lang[(int)E_translate.LANG_COMMON_AS_DETAILDEFAULT] = "detail default";
-            lang[(int)E_translate.LANG_COMMON_AS_DETAILDEFAULTTOOLTIP] = "Details windows initial settings\nwhen opened from this";
-            lang[(int)E_translate.LANG_COMMON_AS_SAVEWVWLOGS] = "Save EVTC logs on WvW squad combat";
-            lang[(int)E_translate.LANG_COMMON_AS_SAVEWVWLOGSTHRESHOLDMIN] = "Min participants for WvW squad logs";
-            lang[(int)E_translate.LANG_COMMON_AS_SAVEWVWLOGSTHRESHOLDMAX] = "Max participants for WvW squad logs";
-            lang[(int)E_translate.LANG_COMMON_AS_SAVEWVWLOGSTOOLTIP] = "Matches advanced sort squad stats,\nstart on damage event in reporting radius\nof squad center, stop on all members\nout of combat";
-            lang[(int)E_translate.LANG_COMMON_AS_DMGOUT] = "Damage out";
-            lang[(int)E_translate.LANG_COMMON_AS_DMGIN] = "Damage in";
-            lang[(int)E_translate.LANG_COMMON_AS_SAVEWVWLOGSENEMYMIN] = "Min player enemies for WvW squad logs";
-            lang[(int)E_translate.LANG_COMMON_AS_ADVANCEDFUNCOPTS] = "Advanced";
-            lang[(int)E_translate.LANG_COMMON_AS_SHOWADVANCEDFUNCOPTS] = "show advanced function options";
-            lang[(int)E_translate.LANG_COMMON_AS_SHOWADVANCEDFUNCOPTSTOOLTIP] = "Changes may cause crashes\nor not play nice\nwith other applications";
-            lang[(int)E_translate.LANG_COMMON_AS_DRAWCOMPAT] = "Use D3DX9";
-            lang[(int)E_translate.LANG_COMMON_AS_SHOWTARGETINFO] = "show target info";
-            lang[(int)E_translate.LANG_COMMON_AS_TARGETINFOTARGET] = "Target";
-            lang[(int)E_translate.LANG_COMMON_AS_PERSISTBUILDRESET] = "Reset persistent on build change";
-            lang[(int)E_translate.LANG_COMMON_AS_OPTSTIME] = "combat time";
-            lang[(int)E_translate.LANG_COMMON_AS_OPTSTIMETOOLTIP] = "Default combat duration is from combat\nstart to combat end. Changes are applied\nimmediately, no reset.";
-            lang[(int)E_translate.LANG_COMMON_AS_OPTSTIME_USEDMG] = "Use last damage event for combat end";
-            lang[(int)E_translate.LANG_COMMON_AS_DRAWBARS] = "draw bars";
-            lang[(int)E_translate.LANG_COMMON_AS_SUBGROUP] = "subgroup";
-            lang[(int)E_translate.LANG_COMMON_AS_TOPSUBGROUPS] = "top subgroups";
-            lang[(int)E_translate.LANG_COMMON_AS_BUFFTOTAL] = "buffs total";
-            lang[(int)E_translate.LANG_COMMON_AS_MAP_MAPASSETTIMEOUT] = "Map asset timeout";
-            lang[(int)E_translate.LANG_COMMON_AS_MAP_MAPASSETTIMEOUTTOOLTIP] = "Max asset load time before\npop-in (2min WvW WP bug)";
-            lang[(int)E_translate.LANG_COMMON_AS_MAP_MAPTIMEOUT] = "Map timeout";
-            lang[(int)E_translate.LANG_COMMON_AS_MAP_MAPTIMEOUTTOOLTIP] = "Max map load time before\npop-in";
-            lang[(int)E_translate.LANG_COMMON_AS_MAP_MODELTIMEOUT] = "Model timeout";
-            lang[(int)E_translate.LANG_COMMON_AS_MAP_MODELTIMEOUTTOOLTIP] = "Max model load time before\npop-in (agent fashion)";
-            lang[(int)E_translate.LANG_COMMON_AS_MAP] = "Map";
+            LANG[(int)E_translate.LANG_COMMON_AS_SUCCESS] = "success";
+            LANG[(int)E_translate.LANG_COMMON_AS_FAIL] = "failed";
+            LANG[(int)E_translate.LANG_COMMON_AS_PADDING] = "padding";
+            LANG[(int)E_translate.LANG_COMMON_AS_BACKGROUND] = "background";
+            LANG[(int)E_translate.LANG_COMMON_AS_ONELINE] = "one line";
+            LANG[(int)E_translate.LANG_COMMON_AS_ALIGNRIGHT] = "align right";
+            LANG[(int)E_translate.LANG_COMMON_AS_RESET] = "Reset";
+            LANG[(int)E_translate.LANG_COMMON_AS_TOTAL] = "total";
+            LANG[(int)E_translate.LANG_COMMON_AS_CLEAVE] = "cleave";
+            LANG[(int)E_translate.LANG_COMMON_AS_TARGET] = "target";
+            LANG[(int)E_translate.LANG_COMMON_AS_IN] = "in";
+            LANG[(int)E_translate.LANG_COMMON_AS_TITLE] = "title bar";
+            LANG[(int)E_translate.LANG_COMMON_AS_NOHISTORY] = "no history";
+            LANG[(int)E_translate.LANG_COMMON_AS_AUTOSIZE] = "auto size";
+            LANG[(int)E_translate.LANG_COMMON_AS_LISTLENGTH] = "max displayed";
+            LANG[(int)E_translate.LANG_COMMON_AS_SCROLLBAR] = "scroll bar";
+            LANG[(int)E_translate.LANG_COMMON_AS_FRIENDLY] = "friendly";
+            LANG[(int)E_translate.LANG_COMMON_AS_LIST] = "List";
+            LANG[(int)E_translate.LANG_COMMON_AS_SKILLS] = "skills";
+            LANG[(int)E_translate.LANG_COMMON_AS_TARGETS] = "targets";
+            LANG[(int)E_translate.LANG_COMMON_AS_LOG] = "log";
+            LANG[(int)E_translate.LANG_COMMON_AS_EXTRAS] = "Extras";
+            LANG[(int)E_translate.LANG_COMMON_AS_VERSIONCHECK] = "Check recommended minimum version";
+            LANG[(int)E_translate.LANG_COMMON_AS_NOOBLACH] = "Suppress objective achievements";
+            LANG[(int)E_translate.LANG_COMMON_AS_NOOBLQUEST] = "Suppress objective quests";
+            LANG[(int)E_translate.LANG_COMMON_AS_NOCOMBATTEXT] = "Suppress floating combat text";
+            LANG[(int)E_translate.LANG_COMMON_AS_CUR] = "cur";
+            LANG[(int)E_translate.LANG_COMMON_AS_REC] = "rec";
+            LANG[(int)E_translate.LANG_COMMON_AS_LOGSINVALID] = "Logs will be invalid";
+            LANG[(int)E_translate.LANG_COMMON_AS_MAPRELOAD] = "requires map reload";
+            LANG[(int)E_translate.LANG_COMMON_AS_NOOBLEVENT] = "Suppress objective events";
+            LANG[(int)E_translate.LANG_COMMON_AS_SLOWVATOOLTIP] = "Warning: results unpredictable";
+            LANG[(int)E_translate.LANG_COMMON_AS_SLOWVA] = "Slow worldstep when window inactive";
+            LANG[(int)E_translate.LANG_COMMON_AS_OPTSEXTRASTOOLTIP] = "Options provided by extras dll";
+            LANG[(int)E_translate.LANG_COMMON_AS_SAVEPROFKEYBINDS] = "Save/restore some profession keybinds";
+            LANG[(int)E_translate.LANG_COMMON_AS_SAVEPROFKEYBINDSTOOLTIP] = "Automatically load last keybinds on map\nenter, and save on map exit\n(skills group, stow weapon)";
+            LANG[(int)E_translate.LANG_COMMON_AS_COMBATTIME] = "combat time";
+            LANG[(int)E_translate.LANG_COMMON_AS_SORTDPS] = "sort per second";
+            LANG[(int)E_translate.LANG_COMMON_AS_STYLE] = "Style";
+            LANG[(int)E_translate.LANG_COMMON_AS_BUFFS] = "buffs";
+            LANG[(int)E_translate.LANG_COMMON_AS_SORTTARGET] = "sort vs target";
+            LANG[(int)E_translate.LANG_COMMON_AS_DISPLAY] = "Display";
+            LANG[(int)E_translate.LANG_COMMON_AS_COLOURSUBGROUP] = "colour by subgroup";
+            LANG[(int)E_translate.LANG_COMMON_AS_FORMATTOOLTIP] = "@1: cleave total\r\n@2: cleave per second\n@3: cleave percent\n@4: target total\n@5: target per second\n@6: target percent";
+            LANG[(int)E_translate.LANG_COMMON_AS_PLAYERFORMAT] = "stats format";
+            LANG[(int)E_translate.LANG_COMMON_AS_DEBUG] = "debug";
+            LANG[(int)E_translate.LANG_COMMON_AS_DATA] = "Data";
+            LANG[(int)E_translate.LANG_COMMON_AS_LABELS] = "labels";
+            LANG[(int)E_translate.LANG_COMMON_AS_NUMBERS] = "index numbers";
+            LANG[(int)E_translate.LANG_COMMON_AS_PROF] = "profession";
+            LANG[(int)E_translate.LANG_COMMON_AS_TOPSKILLS] = "top skills";
+            LANG[(int)E_translate.LANG_COMMON_AS_TOPTARGETS] = "top targets";
+            LANG[(int)E_translate.LANG_COMMON_AS_WIDTH] = "window width";
+            LANG[(int)E_translate.LANG_COMMON_AS_DAMAGE] = "Damage";
+            LANG[(int)E_translate.LANG_COMMON_AS_TAKEN] = "taken";
+            LANG[(int)E_translate.LANG_COMMON_AS_TITLEMATCHFRAME] = "use window colour for title bar";
+            LANG[(int)E_translate.LANG_COMMON_AS_TITLEFORMATTOOLTIP] = "@1: cleave per second\n@2: cleave total\n@3: target per second\n@4: target total\n@5: target name";
+            LANG[(int)E_translate.LANG_COMMON_AS_TITLEFORMAT] = "title bar format";
+            LANG[(int)E_translate.LANG_COMMON_AS_INTERVAL] = "interval";
+            LANG[(int)E_translate.LANG_COMMON_AS_NAMECHARWIDTH] = "max name length";
+            LANG[(int)E_translate.LANG_COMMON_AS_SHOWADVANCEDSTYLEOPTS] = "show advanced style options";
+            LANG[(int)E_translate.LANG_COMMON_AS_SHOWADVANCEDSTYLEOPTSINFO] = "Warning: modifying ImGui style\nmay not do what you want it to do.\nThis is unsupported and no layout\ncompatibility is guaranteed";
+            LANG[(int)E_translate.LANG_COMMON_AS_SHOWADVANCEDSTYLEOPTSCOL] = "Some colours are hardcoded and\ncannot be changed";
+            LANG[(int)E_translate.LANG_COMMON_AS_SHOWADVANCEDSTYLEOPTSPREC] = "Colours defined in config ini\ntake precedence when loaded";
+            LANG[(int)E_translate.LANG_COMMON_AS_NAME] = "name";
+            LANG[(int)E_translate.LANG_COMMON_AS_NAMECOLPROF] = "name colour using profession";
+            LANG[(int)E_translate.LANG_COMMON_AS_NAMECOLSUBGROUP] = "name colour using subgroup";
+            LANG[(int)E_translate.LANG_COMMON_AS_SORTSUBGROUP] = "sort by subgroup";
+            LANG[(int)E_translate.LANG_COMMON_AS_MEMGW2] = "M.gw2";
+            LANG[(int)E_translate.LANG_COMMON_AS_MEMARC] = "M.arc";
+            LANG[(int)E_translate.LANG_COMMON_AS_DISTCBT] = "Dist.cbt";
+            LANG[(int)E_translate.LANG_COMMON_AS_DISTOOC] = "Dist.ooc";
+            LANG[(int)E_translate.LANG_COMMON_AS_TIMECBT] = "Time.cbt";
+            LANG[(int)E_translate.LANG_COMMON_AS_TIMEOOC] = "Time.ooc";
+            LANG[(int)E_translate.LANG_COMMON_AS_DETAILED] = "detailed";
+            LANG[(int)E_translate.LANG_COMMON_AS_SIMDISABLED] = "simulation disabled";
+            LANG[(int)E_translate.LANG_COMMON_AS_SORTADV] = "sort advanced";
+            LANG[(int)E_translate.LANG_COMMON_AS_SORTADVTOOLTIP] = "Advanced sort options override default\nsort options and player format strings,\nas well as require more CPU";
+            LANG[(int)E_translate.LANG_COMMON_AS_SHOWADVANCEDSTYLEOPTSTOOLTIP] = "Changes to default style will\nnot retroactively apply to\nthese. Delete the appearance_ keys\nin the ini to reset";
+            LANG[(int)E_translate.LANG_COMMON_AS_HISTORY] = "history";
+            LANG[(int)E_translate.LANG_COMMON_AS_SORTADV_ADVANCED] = "Adv";
+            LANG[(int)E_translate.LANG_COMMON_AS_SORTADV_FNNONE] = "none";
+            LANG[(int)E_translate.LANG_COMMON_AS_SORTADV_FNDOWN] = "downeds";
+            LANG[(int)E_translate.LANG_COMMON_AS_SORTADV_FNDOWNPERSIST] = "time between downeds";
+            LANG[(int)E_translate.LANG_COMMON_AS_SORTADV_FNDEATH] = "deaths";
+            LANG[(int)E_translate.LANG_COMMON_AS_SORTADV_FNDEATHPERSIST] = "time between deaths";
+            LANG[(int)E_translate.LANG_COMMON_AS_SORTADV_FNRESCOUNT] = "res count";
+            LANG[(int)E_translate.LANG_COMMON_AS_SORTADV_FNRESTIME] = "res time";
+            LANG[(int)E_translate.LANG_COMMON_AS_SORTADV_FNCLEANSE] = "cleanses";
+            LANG[(int)E_translate.LANG_COMMON_AS_SORTADV_FNSTRIP] = "strips";
+            LANG[(int)E_translate.LANG_COMMON_AS_SORTADV_FNDPSOUTNEARPERSIST] = "dps out persist";
+            LANG[(int)E_translate.LANG_COMMON_AS_SORTADV_FNDPSINNEARPERSIST] = "dps in persist";
+            LANG[(int)E_translate.LANG_COMMON_AS_STATSEXCLUDE] = "stats exclude";
+            LANG[(int)E_translate.LANG_COMMON_AS_STATSEXCLUDETOOLTIP] = "Exclusion applies to all area stats\nand details windows, aggregate and skills";
+            LANG[(int)E_translate.LANG_COMMON_AS_STATSEXCLUDEACTIVE] = "excl";
+            LANG[(int)E_translate.LANG_COMMON_AS_STATSEXCLUDEVSPLAYER] = "vs players";
+            LANG[(int)E_translate.LANG_COMMON_AS_STATSEXCLUDEVSNPC] = "vs npcs";
+            LANG[(int)E_translate.LANG_COMMON_AS_STATSEXCLUDEVSGADGET] = "vs gadgets";
+            LANG[(int)E_translate.LANG_COMMON_AS_STATSEXCLUDEFROMPLAYER] = "from players";
+            LANG[(int)E_translate.LANG_COMMON_AS_STATSEXCLUDEFROMNPC] = "from npcs";
+            LANG[(int)E_translate.LANG_COMMON_AS_STATSEXCLUDEFROMGADGET] = "from gadgets";
+            LANG[(int)E_translate.LANG_COMMON_AS_OPTSBASICTOOLTIP] = "Global interface options";
+            LANG[(int)E_translate.LANG_COMMON_AS_OPTSLOGSTOOLTIP] = "Boss encounter logging options";
+            LANG[(int)E_translate.LANG_COMMON_AS_OPTSPLAYERTOOLTIP] = "Player tooltips";
+            LANG[(int)E_translate.LANG_COMMON_AS_OPTSDISPLAYTOOLTIP] = "Data display";
+            LANG[(int)E_translate.LANG_COMMON_AS_OPTSSTYLETOOLTIP] = "Window style";
+            LANG[(int)E_translate.LANG_COMMON_AS_PERSISTRESET] = "Reset persistent";
+            LANG[(int)E_translate.LANG_COMMON_AS_SORTADV_FNDPSOUTNEARSQUAD] = "squad time dps out";
+            LANG[(int)E_translate.LANG_COMMON_AS_SORTADV_FNDPSINNEARSQUAD] = "squad time dps in";
+            LANG[(int)E_translate.LANG_COMMON_AS_ALWAYSSHOWWINDOWS] = "Always draw windows";
+            LANG[(int)E_translate.LANG_COMMON_AS_PERSISTPARTYRESET] = "Reset persistent on party join/leave";
+            LANG[(int)E_translate.LANG_COMMON_AS_PERSISTPROFRESET] = "Reset persistent on prof change";
+            LANG[(int)E_translate.LANG_COMMON_AS_DETAILDEFAULT] = "detail default";
+            LANG[(int)E_translate.LANG_COMMON_AS_DETAILDEFAULTTOOLTIP] = "Details windows initial settings\nwhen opened from this";
+            LANG[(int)E_translate.LANG_COMMON_AS_SAVEWVWLOGS] = "Save EVTC logs on WvW squad combat";
+            LANG[(int)E_translate.LANG_COMMON_AS_SAVEWVWLOGSTHRESHOLDMIN] = "Min participants for WvW squad logs";
+            LANG[(int)E_translate.LANG_COMMON_AS_SAVEWVWLOGSTHRESHOLDMAX] = "Max participants for WvW squad logs";
+            LANG[(int)E_translate.LANG_COMMON_AS_SAVEWVWLOGSTOOLTIP] = "Matches advanced sort squad stats,\nstart on damage event in reporting radius\nof squad center, stop on all members\nout of combat";
+            LANG[(int)E_translate.LANG_COMMON_AS_DMGOUT] = "Damage out";
+            LANG[(int)E_translate.LANG_COMMON_AS_DMGIN] = "Damage in";
+            LANG[(int)E_translate.LANG_COMMON_AS_SAVEWVWLOGSENEMYMIN] = "Min player enemies for WvW squad logs";
+            LANG[(int)E_translate.LANG_COMMON_AS_ADVANCEDFUNCOPTS] = "Advanced";
+            LANG[(int)E_translate.LANG_COMMON_AS_SHOWADVANCEDFUNCOPTS] = "show advanced function options";
+            LANG[(int)E_translate.LANG_COMMON_AS_SHOWADVANCEDFUNCOPTSTOOLTIP] = "Changes may cause crashes\nor not play nice\nwith other applications";
+            LANG[(int)E_translate.LANG_COMMON_AS_DRAWCOMPAT] = "Use D3DX9";
+            LANG[(int)E_translate.LANG_COMMON_AS_SHOWTARGETINFO] = "show target info";
+            LANG[(int)E_translate.LANG_COMMON_AS_TARGETINFOTARGET] = "Target";
+            LANG[(int)E_translate.LANG_COMMON_AS_PERSISTBUILDRESET] = "Reset persistent on build change";
+            LANG[(int)E_translate.LANG_COMMON_AS_OPTSTIME] = "combat time";
+            LANG[(int)E_translate.LANG_COMMON_AS_OPTSTIMETOOLTIP] = "Default combat duration is from combat\nstart to combat end. Changes are applied\nimmediately, no reset.";
+            LANG[(int)E_translate.LANG_COMMON_AS_OPTSTIME_USEDMG] = "Use last damage event for combat end";
+            LANG[(int)E_translate.LANG_COMMON_AS_DRAWBARS] = "draw bars";
+            LANG[(int)E_translate.LANG_COMMON_AS_SUBGROUP] = "subgroup";
+            LANG[(int)E_translate.LANG_COMMON_AS_TOPSUBGROUPS] = "top subgroups";
+            LANG[(int)E_translate.LANG_COMMON_AS_BUFFTOTAL] = "buffs total";
+            LANG[(int)E_translate.LANG_COMMON_AS_MAP_MAPASSETTIMEOUT] = "Map asset timeout";
+            LANG[(int)E_translate.LANG_COMMON_AS_MAP_MAPASSETTIMEOUTTOOLTIP] = "Max asset load time before\npop-in (2min WvW WP bug)";
+            LANG[(int)E_translate.LANG_COMMON_AS_MAP_MAPTIMEOUT] = "Map timeout";
+            LANG[(int)E_translate.LANG_COMMON_AS_MAP_MAPTIMEOUTTOOLTIP] = "Max map load time before\npop-in";
+            LANG[(int)E_translate.LANG_COMMON_AS_MAP_MODELTIMEOUT] = "Model timeout";
+            LANG[(int)E_translate.LANG_COMMON_AS_MAP_MODELTIMEOUTTOOLTIP] = "Max model load time before\npop-in (agent fashion)";
+            LANG[(int)E_translate.LANG_COMMON_AS_MAP] = "Map";
 
 
 
 
 
-            return lang;
+            return LANG;
         }
 
     
